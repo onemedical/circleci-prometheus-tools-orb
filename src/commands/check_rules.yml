@@ -1,0 +1,15 @@
+description: 'Check if the rule files are valid or not.'
+parameters:
+  rule_files:
+    description: The rule files to check.
+    type: string
+  working_directory:
+    description: 'In which directory to run this command. Will be interpreted relative to the working_directory of the job). (default: .)'
+    type: string
+    default: '.'
+steps:
+  - install_promtool
+  - run:
+      name: 'run promtool check rules'
+      working_directory: <<parameters.working_directory>
+      command: promtool check rules <<parameters.rule_files>>

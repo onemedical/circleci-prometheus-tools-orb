@@ -1,0 +1,15 @@
+description: 'installs amtool'
+
+steps:
+  - run:
+    name: 'installs amtool'
+    command: >
+      if ! command -v amtool --version >/dev/null 2>&1  ; then
+          echo installing amtool
+          go get github.com/prometheus/alertmanager/cmd/amtool
+      else
+          echo amtool already exist. skipping install.
+      fi
+  - run:
+    name: 'export amtool command'
+    command: echo `export PATH="$PATH:$GOPATH/bin/amtool"` >> $BASH_ENV

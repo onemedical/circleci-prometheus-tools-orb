@@ -1,0 +1,7 @@
+version: 2.1
+
+description: |
+  Various tools for working with the Prometheus and Alertmanager configuration. Provided by prometheus promtool and alertmanager amtool.
+display:
+  home_url: https://prometheus.io/
+  source_url: https://github.com/onemedical/circleci-prometheus-tools-orb

@@ -1,0 +1,15 @@
+description: 'Unit tests for rules.'
+parameters:
+  test-rule-files:
+    description: The unit test files.
+    type: string
+  working_directory:
+    description: 'In which directory to run this command. Will be interpreted relative to the working_directory of the job). (default: .)'
+    type: string
+    default: '.'
+steps:
+  - install_promtool
+  - run:
+      name: 'promtool test rules'
+      working_directory: <<parameters.working_directory>
+      command: promtool test rules <<parameters.test-rule-files>>
