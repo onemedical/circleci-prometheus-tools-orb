@@ -35,7 +35,7 @@
 
 # CLA Acceptance
 
-Please indicated your acceptance of the [CLA](<../docs/OM Contributor License Agreement_online version_110320.pdf>) below:
+Please indicate your acceptance of the [CLA](<../docs/OM Contributor License Agreement_online version_110320.pdf>) below:
 
 - [ ] I ACCEPT -- I have sole ownership of intellectual property rights to my Contribution and I am not making a submission in the course of work for my employer.
 
