@@ -12,7 +12,7 @@ A Circleci orb for the Prometheus cli tools `promtool` and `amtool`. Useful for 
 ### How to Contribute
 
 We welcome [issues](https://github.com/onemedical/circleci-prometheus-tools-orb/issues) to this repository!
-For Contributions please see [CONTRIBUTING.md](CONTRIBUTING.md) for how to contribute.
+For Contributions please read [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ### How to Publish
 * Create and push a branch with your new features.
@@ -28,9 +28,4 @@ For Contributions please see [CONTRIBUTING.md](CONTRIBUTING.md) for how to contr
 
 Example: `[semver:major]`
 
-* Squash and merge. Ensure the semver tag is preserved and entered as a part of the commit message.
-* On merge, after manual approval, the orb will automatically be published to the Orb Registry.
-
-
-For further questions/comments about this or other orbs, visit the Orb Category of [CircleCI Discuss](https://discuss.circleci.com/c/orbs).
-
+* On Squash and merge. Ensure the semver tag is preserved and entered as a part of the commit message.
