@@ -11,5 +11,5 @@ steps:
   - install_amtool
   - run:
       name: 'run amtool check-config'
-      working_directory: <<parameters.working_directory>
+      working_directory: <<parameters.working_directory>>
       command: amtool check-config <<parameters.config_file_path>>

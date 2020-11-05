@@ -11,5 +11,5 @@ steps:
   - install_promtool
   - run:
       name: 'run promtool check config'
-      working_directory: <<parameters.working_directory>
+      working_directory: <<parameters.working_directory>>
       command: promtool check config <<parameters.config_file_path>>
