@@ -11,4 +11,4 @@ parameters:
 
 resource_class: << parameters.resource_class >>
 docker:
-- image: circleci/golang:<< parameters.version >>
+  - image: circleci/golang:<< parameters.version >>

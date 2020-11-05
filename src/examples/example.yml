@@ -1,0 +1,19 @@
+description: validate and test alerts.
+
+usage:
+  version: 2.1
+  orbs:
+    prometheus: bar/promtheus-tools@1.2.3
+  workflows:
+    prometheus_rule_deploy:
+      machine: true
+      jobs:
+        - prometheus/verify_rules:
+            pre-steps:
+              - checkout
+            working_directory: 'prometheus/rules'
+            rule-files: '*.yml'
+            test-rule-files: 'tests/*.yml'
+            post-steps:
+              - run:
+                  command: echo "upload artifact to s3"

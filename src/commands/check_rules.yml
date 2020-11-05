@@ -11,5 +11,5 @@ steps:
   - install_promtool
   - run:
       name: 'run promtool check rules'
-      working_directory: <<parameters.working_directory>
+      working_directory: <<parameters.working_directory>>
       command: promtool check rules <<parameters.rule_files>>

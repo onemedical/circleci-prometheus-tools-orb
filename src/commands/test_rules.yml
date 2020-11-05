@@ -1,6 +1,6 @@
 description: 'Unit tests for rules.'
 parameters:
-  test-rule-files:
+  test_rule_files:
     description: The unit test files.
     type: string
   working_directory:
@@ -11,5 +11,5 @@ steps:
   - install_promtool
   - run:
       name: 'promtool test rules'
-      working_directory: <<parameters.working_directory>
-      command: promtool test rules <<parameters.test-rule-files>>
+      working_directory: <<parameters.working_directory>>
+      command: promtool test rules <<parameters.test_rule_files>>
