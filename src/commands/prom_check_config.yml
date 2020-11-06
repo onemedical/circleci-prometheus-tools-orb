@@ -1,7 +1,7 @@
-description: 'Unit tests for rules.'
+description: 'Check if the prometheus config files are valid or not.'
 parameters:
-  test_rule_files:
-    description: The unit test files.
+  config_file_path:
+    description: The prometheus config file to validate.
     type: string
   working_directory:
     description: 'In which directory to run this command. Will be interpreted relative to the working_directory of the job). (default: .)'
@@ -10,6 +10,6 @@ parameters:
 steps:
   - install_promtool
   - run:
-      name: 'promtool test rules'
+      name: 'run promtool check config'
       working_directory: <<parameters.working_directory>>
-      command: promtool test rules <<parameters.test_rule_files>>
+      command: promtool check config <<parameters.config_file_path>>

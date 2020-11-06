@@ -3,7 +3,7 @@ parameters:
   rule_files:
     description: (required) The rule files to check.
     type: string
-  test-rule-files:
+  test_rule_files:
     description: The unit test files.
     type: string
   working_directory:
@@ -14,27 +14,6 @@ docker:
   - image: circleci/golang:1.15
 steps:
   - check_rules:
-      rule_files: <<parameters.rule-files>>
-  - test-rules:
-      test-rule-files: examples/ecs-hello-world-ruby/prometheus/tests/*test.yml
-
-examples:
-  basic_usage:
-    description: validate and test alerts
-    usage:
-      version: 2.1
-      orbs:
-        prometheus: bar/promtheus-tools@1.2.3
-      workflows:
-        prometheus_rule_deploy:
-          machine: true
-          jobs:
-            - prometheus/verify_rules:
-                pre-steps:
-                  - checkout
-                working_directory: 'prometheus/rules'
-                rule-files: '*.yml'
-                test-rule-files: 'tests/*.yml'
-                post-steps:
-                  - run:
-                      command: echo "upload artifact to s3"
+      rule_files: <<parameters.rule_files>>
+  - test_rules:
+      test_rule_files: <<parameters.test_rule_files>>
