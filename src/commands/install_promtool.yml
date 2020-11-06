@@ -1,14 +1,14 @@
 description: 'installs promtool'
 steps:
   - run:
-    name: 'installs promtool'
-    command: >
-      if ! command -v promtool --version >/dev/null 2>&1  ; then
-          echo installing promtool
-          go get github.com/prometheus/prometheus/cmd/promtool
-      else
-          echo promtool already exist. skipping install.
-      fi
+      name: 'installs promtool'
+      command: |
+        if ! command -v promtool --version >/dev/null 2>&1  ; then
+            echo installing promtool
+            go get github.com/prometheus/prometheus/cmd/promtool
+        else
+            echo promtool already exist. skipping install.
+        fi
   - run:
-    name: 'export promtool command'
-    command: echo `export PATH="$PATH:$GOPATH/bin/promtool"` >> $BASH_ENV
+      name: 'export promtool command'
+      command: echo `export PATH="$PATH:$GOPATH/bin/promtool"` >> $BASH_ENV

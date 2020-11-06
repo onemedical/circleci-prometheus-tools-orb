@@ -1,0 +1,15 @@
+description: 'Validates the syntax and schema for alertmanager config file and associated templates. Non existing templates will not trigger errors.'
+parameters:
+  config_file_path:
+    description: The alertmanager config files to validate.
+    type: string
+  working_directory:
+    description: 'In which directory to run this command. Will be interpreted relative to the working_directory of the job). (default: .)'
+    type: string
+    default: '.'
+steps:
+  - install_amtool
+  - run:
+      name: 'run amtool check-config'
+      working_directory: <<parameters.working_directory>>
+      command: amtool check-config <<parameters.config_file_path>>
