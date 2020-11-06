@@ -16,4 +16,4 @@ usage:
             test-rule-files: 'tests/*.yml'
             post-steps:
               - run:
-                  command: echo "upload artifact to s3"
+                  command: echo "upload artifacts to s3"

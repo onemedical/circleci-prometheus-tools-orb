@@ -1,7 +1,7 @@
-description: 'Check if the prometheus config files are valid or not.'
+description: 'Validates the syntax and schema for alertmanager config file and associated templates. Non existing templates will not trigger errors.'
 parameters:
   config_file_path:
-    description: The alertmanager config file to validate.
+    description: The alertmanager config files to validate.
     type: string
   working_directory:
     description: 'In which directory to run this command. Will be interpreted relative to the working_directory of the job). (default: .)'
