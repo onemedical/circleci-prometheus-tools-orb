@@ -1,6 +1,6 @@
 # Contributing
 
-In accordance with 1Life Healthcare, Inc. policy, all contributions are subject to the One Medical Contributor License Agreement (“CLA”), found [here].
+In accordance with 1Life Healthcare, Inc. policy, all contributions are subject to the One Medical Contributor License Agreement (“CLA”), found [here](<docs/OM Contributor License Agreement_online version_110320.pdf>).
 
 You must indicate your acceptance of the CLA with each Pull Request, together with a statement about whether you are contributing as an individual or on behalf of your employer, within the Pull Request Summary for your contribution.
 
