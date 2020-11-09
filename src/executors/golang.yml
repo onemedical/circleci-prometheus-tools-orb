@@ -1,14 +1,10 @@
-description: >
-  Golang container executor
+description: Golang container executor
 
 parameters:
   version:
     description: Go version
     type: string
-  resource_class:
-    description: Resource class
-    type: string
+    default: '1.15.4'
 
-resource_class: << parameters.resource_class >>
 docker:
-  - image: circleci/golang:<< parameters.version >>
+  - image: cimg/go:<< parameters.version >>

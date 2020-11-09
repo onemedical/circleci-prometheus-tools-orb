@@ -3,12 +3,11 @@ description: validate and test alerts.
 usage:
   version: 2.1
   orbs:
-    prometheus: bar/promtheus-tools@1.2.3
+    prometheus-tools: onemedical/prometheus-tools@0.1.0
   workflows:
     prometheus_rule_deploy:
-      machine: true
       jobs:
-        - prometheus/verify_rules:
+        - prometheus-tools/verify_rules:
             pre-steps:
               - checkout
             working_directory: 'prometheus/rules'
