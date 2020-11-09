@@ -6,7 +6,6 @@ usage:
     prometheus: bar/promtheus-tools@1.2.3
   workflows:
     prometheus_rule_deploy:
-      machine: true
       jobs:
         - prometheus/verify_rules:
             pre-steps:
