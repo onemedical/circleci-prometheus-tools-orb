@@ -1,4 +1,4 @@
-# Orb Project Template
+# The prometheus-tools orb
 
 [![CircleCI Build Status](https://circleci.com/gh/onemedical/circleci-prometheus-tools-orb.svg?style=shield "CircleCI Build Status")](https://circleci.com/gh/onemedical/circleci-prometheus-tools-orb) [![CircleCI Orb Version](https://img.shields.io/badge/endpoint.svg?url=https://badges.circleci.io/orb/onemedical/circleci-prometheus-tools-orb)](https://circleci.com/orbs/registry/orb/onemedical/circleci-prometheus-tools-orb) [![GitHub License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/onemedical/circleci-prometheus-tools-orb/master/LICENSE) [![CircleCI Community](https://img.shields.io/badge/community-CircleCI%20Discuss-343434.svg)](https://discuss.circleci.com/c/ecosystem/orbs)
 
