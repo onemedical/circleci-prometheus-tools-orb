@@ -5,7 +5,7 @@ steps:
       command: |
         if ! command -v promtool --version >/dev/null 2>&1  ; then
             echo installing promtool
-            go get github.com/prometheus/prometheus/cmd/promtool
+            go get github.com/prometheus/prometheus/cmd/promtool@master
         else
             echo promtool already exist. skipping install.
         fi
