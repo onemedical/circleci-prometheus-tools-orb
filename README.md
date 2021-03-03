@@ -29,3 +29,15 @@ For Contributions please read [CONTRIBUTING.md](CONTRIBUTING.md).
 Example: `[semver:major]`
 
 * On Squash and merge. Ensure the semver tag is preserved and entered as a part of the commit message.
+
+## FAQ
+
+### The circleci build fails with the error `The dev version of onemedical/prometheus-tools@dev:alpha has expired.`
+
+To fix this run the following commands:
+```
+circleci orb pack --skip-update-check src > orb.yml
+circleci orb validate orb.yml
+circleci orb publish orb.yml onemedical/prometheus-tools@dev:alpha
+```
+
