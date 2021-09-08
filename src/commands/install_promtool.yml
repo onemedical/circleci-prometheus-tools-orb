@@ -3,7 +3,7 @@ parameters:
   version:
     description: The module version to be installed.
     type: string
-    default: 'main'
+    default: ${PROMTOOL_VERSION:-main}
 steps:
   - run:
       name: 'installs promtool'
