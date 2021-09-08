@@ -4,7 +4,7 @@ parameters:
   version:
     description: Go version
     type: string
-    default: '1.15.4'
+    default: '1.17.0'
 
 docker:
   - image: cimg/go:<< parameters.version >>
