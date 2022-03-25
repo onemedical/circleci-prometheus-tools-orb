@@ -11,7 +11,7 @@ parameters:
     type: string
     default: '.'
 docker:
-  - image: circleci/golang:1.15
+  - image: cimg/go:1.18
 steps:
   - check_rules:
       rule_files: <<parameters.rule_files>>
