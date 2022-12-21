@@ -10,7 +10,7 @@ steps:
       command: |
         if ! command -v promtool --version >/dev/null 2>&1  ; then
             echo installing promtool
-            env GO111MODULE=on go get github.com/prometheus/prometheus/cmd/promtool@<<parameters.version>>
+            go install github.com/prometheus/prometheus/cmd/promtool@<<parameters.version>>
         else
             echo promtool already exist. skipping install.
         fi
